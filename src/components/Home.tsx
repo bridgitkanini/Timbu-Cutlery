@@ -1,15 +1,15 @@
-import Home from "./components/Home"
+import Navbar from './Navbar.tsx';
 
 
-function App() {
 
+function Home() {
   return (
     <>
       <div className="max-w-[430px] md:max-w-[1440px] m-auto ">
-        <Home />
+        <Navbar />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default Home;
