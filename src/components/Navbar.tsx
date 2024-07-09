@@ -7,6 +7,7 @@ import { CiCircleQuestion } from "react-icons/ci";
 import { GrFavorite } from "react-icons/gr";
 import { FaCheck } from "react-icons/fa6";
 import Avatar from "./../assets/images/Avatar.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const categories = [
@@ -29,7 +30,7 @@ const Navbar = () => {
       <div className="flex flex-row mt-10 mb-2 sm:mb-5 gap-14">
         <FiSearch className="text-3xl text-gray-500 block sm:hidden" />
         <div className="flex flex-row gap-2">
-          <h1 className="text-3xl font-bold text-gray-500 sm:ml-[600px] ">
+          <h1 className="text-3xl font-bold text-gray-600 sm:ml-[600px] ">
             TIMBU
           </h1>
           <div className="hidden sm:flex sm:flex-row gap-2 ml-96 items-center justify-center">
@@ -38,7 +39,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex flex-row gap-2">
-          <IoCartOutline className="text-3xl text-gray-500 block sm:hidden" />
+          <Link to="/cart">
+            <button>
+              <IoCartOutline className="text-3xl text-gray-500 block sm:hidden" />
+            </button>
+          </Link>
           <IoReorderThreeSharp className="text-3xl text-gray-500 block sm:hidden" />
         </div>
       </div>
@@ -54,7 +59,11 @@ const Navbar = () => {
           />
         </div>
         <GrFavorite className="text-2xl" />
-        <IoCartOutline className="text-2xl" />
+        <Link to="/cart">
+          <button>
+            <IoCartOutline className="text-2xl" />
+          </button>
+        </Link>
       </div>
       <div className="flex flex-row gap-1 sm:gap-16 items-center justify-center my-4">
         {categories.map((category) => (
