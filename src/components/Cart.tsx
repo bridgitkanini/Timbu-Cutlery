@@ -32,7 +32,7 @@ const Cart = () => {
           <hr className="w-11/12 block sm:hidden "/>
           <div className="flex flex-row gap-20 my-4 -ml-20 font-bold">
             <p>Subtotal</p>
-            <p>$651.49</p>
+            <p>£651.49</p>
           </div>
           <hr className="w-11/12 block sm:hidden" />
           <Link to="/checkout">

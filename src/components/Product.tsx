@@ -18,7 +18,7 @@ const Product = () => {
         <ProductCarousel />
         <hr className="sm:w-[1280px] hidden sm:block" />
         <div className="flex flex-col justify-start ml-5 sm:ml-10">
-          <p className="text-3xl font-bold">$100.99</p>
+          <p className="text-3xl font-bold">£100.99</p>
           <p className="text-xl">Stainless Steel Frying Pan</p>
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex flex-row gap-1 mt-5">

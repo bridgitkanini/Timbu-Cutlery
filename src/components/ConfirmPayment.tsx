@@ -37,7 +37,7 @@ const ConfirmPayment = () => {
       <div className="sm:ml-96">
         <div className="flex flex-row gap-20 sm:gap-80 ml-10">
           <p>Order Date</p>
-          <p>$651.49</p>
+          <p>£651.49</p>
         </div>
         <div className="flex flex-row gap-20 sm:gap-80 ml-10">
           <p>Promocode</p>
@@ -46,20 +46,20 @@ const ConfirmPayment = () => {
         <hr className="w-11/12 ml-4 my-4 sm:-ml-40" />
         <div className="flex flex-row gap-24 sm:gap-[330px] ml-10">
           <p>Sub Total</p>
-          <p>$651.49</p>
+          <p>£651.49</p>
         </div>
         <div className="flex flex-row gap-24 sm:gap-[330px] ml-10">
           <p>Shipping</p>
-          <p>$3.99</p>
+          <p>£3.99</p>
         </div>
         <div className="flex flex-row gap-24 sm:gap-[330px] ml-10">
           <p>Discount</p>
-          <p>$651.49</p>
+          <p>£651.49</p>
         </div>
         <hr className="w-11/12 ml-4 my-4 sm:-ml-40" />
         <div className="flex flex-row gap-[120px] sm:gap-[354px] ml-10 font-bold">
           <p>Total</p>
-          <p>$655.48</p>
+          <p>£655.48</p>
         </div>
         <hr className="w-11/12 ml-4 my-4 sm:-ml-40" />
       </div>

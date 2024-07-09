@@ -17,41 +17,37 @@ type CardsProps = {
 
 const Cards: FunctionComponent<CardsProps> = ({ className }) => {
   const imagesData = [
-    { image: Image01, price: "$100.00", name: "Stainless Steel Frying Pan" },
-    { image: Image02, price: "$220.50", name: "Gourmet Kiru Knife Set" },
-    { image: Image03, price: "$300.00", name: "Stand Mixer" },
+    { image: Image01, price: "£100.00", name: "Stainless Steel Frying Pan" },
+    { image: Image02, price: "£220.50", name: "Gourmet Kiru Knife Set" },
+    { image: Image03, price: "£300.00", name: "Stand Mixer" },
     {
       image: Image04,
-      price1: "$80.00",
-      price2: "$70.00",
+      price1: "£80.00",
+      price2: "£70.00",
       name: "Rochell Highball Glasses",
     },
     {
       image: Image05,
-      price1: "$20.00",
-      price2: "$10.00",
+      price1: "£20.00",
+      price2: "£10.00",
       name: "Clear Recycled Plastic Tumbler",
     },
-    { image: Image06, price: "$199.00", name: "Granite Non-Stick Griddle Pan" },
+    { image: Image06, price: "£199.00", name: "Granite Non-Stick Griddle Pan" },
     {
       image: Image07,
-      price1: "$49.00",
-      price2: "$40.00",
+      price1: "£49.00",
+      price2: "£40.00",
       name: "Granite Shallow Casserole Dish & Lid",
     },
-    { image: Image08, price: "$199.00", name: "Pasta Maker" },
-    { image: Image09, price: "$199.00", name: "Stainless Steel Frying Pan" },
+    { image: Image08, price: "£199.00", name: "Pasta Maker" },
+    { image: Image09, price: "£199.00", name: "Stainless Steel Frying Pan" },
   ];
 
   return (
     <div className="max-w-[430px] md:max-w-[1440px] m-5 flex flex-col gap-4 items-center justify-center">
       <div className={className}>
         {imagesData.map((image) => (
-          <Link
-            to="/product"
-            className="flex flex-col gap-2"
-            key={image.name}
-          >
+          <Link to="/product" className="flex flex-col gap-2" key={image.name}>
             <img
               src={image.image}
               alt="image"
