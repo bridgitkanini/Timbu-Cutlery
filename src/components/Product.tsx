@@ -52,7 +52,7 @@ const Product = () => {
                 <GrFavorite className="text-xl" /> Save for Later
               </button>
               <Link to="/cart">
-                <button className="bg-purple-950 rounded-lg py-2 px-10 text-white text-xl">
+                <button className="bg-violet-950 rounded-lg py-2 px-10 text-white text-xl">
                   Add to Cart
                 </button>
               </Link>
