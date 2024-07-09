@@ -1,5 +1,3 @@
-import ProductCarousel from "./../assets/images/Product Carousel.png";
-import ProductCarouselMobile from "./../assets/images/Product Carousel Mobile.png";
 import { IoStar } from "react-icons/io5";
 import { IoMdStarOutline } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
@@ -11,21 +9,13 @@ import ReviewsMobile from "./../assets/images/Reviews Mobile.png";
 import Review1 from "./../assets/images/Reviews 1.png";
 import Review2 from "./../assets/images/Reviews 2.png";
 import Review3 from "./../assets/images/Reviews 3.png";
+import ProductCarousel from "./ProductCarousel";
 
 const Product = () => {
   return (
     <div id="product">
       <div className="max-w-[430px] md:max-w-[1440px] m-5 flex flex-col gap-4 justify-center">
-        <img
-          src={ProductCarousel}
-          alt="product"
-          className="m-10 hidden sm:block"
-        />
-        <img
-          src={ProductCarouselMobile}
-          alt="product"
-          className="m-10 block sm:hidden"
-        />
+        <ProductCarousel />
         <hr className="sm:w-[1280px] hidden sm:block" />
         <div className="flex flex-col justify-start ml-5 sm:ml-10">
           <p className="text-3xl font-bold">$100.99</p>
