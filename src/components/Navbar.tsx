@@ -1,13 +1,12 @@
 import React from "react";
 import { FiSearch } from "react-icons/fi";
-import { IoCartOutline } from "react-icons/io5";
-import { IoReorderThreeSharp } from "react-icons/io5";
-import { CiSettings } from "react-icons/ci";
-import { CiCircleQuestion } from "react-icons/ci";
+import { IoCartOutline, IoReorderThreeSharp } from "react-icons/io5";
+import { CiSettings, CiCircleQuestion } from "react-icons/ci";
 import { GrFavorite } from "react-icons/gr";
 import { FaCheck } from "react-icons/fa6";
-import Avatar from "./../assets/images/Avatar.png";
 import { Link } from "react-router-dom";
+import Avatar from "./../assets/images/Avatar.png";
+import Menu from "./../assets/images/Menu.png";
 
 const Navbar = () => {
   const categories = [
@@ -20,19 +19,38 @@ const Navbar = () => {
     "Sets",
   ];
   const [activeCategory, setActiveCategory] = React.useState("All");
+  const [showMenu, setShowMenu] = React.useState(false);
+  const [showReorderMenu, setShowReorderMenu] = React.useState(false);
 
   const handleCategoryClick = (category: string) => {
     setActiveCategory(category);
   };
 
+  const handleAvatarClick = () => {
+    setShowMenu(!showMenu);
+    if (showReorderMenu) setShowReorderMenu(false);
+  };
+
+  const handleReorderClick = () => {
+    setShowReorderMenu(!showReorderMenu);
+    if (showMenu) setShowMenu(false);
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center">
       <div className="flex flex-row mt-10 mb-2 sm:mb-5 gap-14">
         <FiSearch className="text-3xl text-gray-500 block sm:hidden" />
-        <div className="flex flex-row gap-2">
-          <h1 className="text-3xl font-bold text-gray-600 sm:ml-[600px] ">
-            TIMBU
-          </h1>
+        <div
+          className={`flex flex-row gap-2 cursor-pointer`}
+          onClick={handleAvatarClick}
+        >
+          <Link to="/">
+            <button>
+              <h1 className="text-3xl font-bold text-gray-600 sm:ml-[600px]">
+                TIMBU
+              </h1>
+            </button>
+          </Link>
           <div className="hidden sm:flex sm:flex-row gap-2 ml-96 items-center justify-center">
             <img src={Avatar} alt="avatar" />
             <p>Olivia Rhye</p>
@@ -44,7 +62,10 @@ const Navbar = () => {
               <IoCartOutline className="text-3xl text-gray-500 block sm:hidden" />
             </button>
           </Link>
-          <IoReorderThreeSharp className="text-3xl text-gray-500 block sm:hidden" />
+          <IoReorderThreeSharp
+            className="text-3xl text-gray-500 block sm:hidden cursor-pointer"
+            onClick={handleReorderClick}
+          />
         </div>
       </div>
       <div className="hidden sm:flex sm:flex-row gap-4 items-center justify-center">
@@ -55,7 +76,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search for anything"
-            className="bg-gray-100"
+            className="bg-gray-100 w-full focus:outline-none"
           />
         </div>
         <GrFavorite className="text-2xl" />
@@ -79,6 +100,31 @@ const Navbar = () => {
           </button>
         ))}
       </div>
+      {showMenu && (
+        <div
+          className="fixed top-0 right-0 mt-16 mr-4 p-4 shadow-lg rounded-lg z-20 w-56 h-[450px] "
+          onClick={() => setShowMenu(false)}
+        >
+          <img src={Menu} alt="menu" className="w-full h-full object-cover" />
+        </div>
+      )}
+      {showReorderMenu && (
+        <div
+         className="fixed top-0 right-0 mt-16 mr-4 p-4 shadow-lg rounded-lg z-20 w-56 h-[450px] "
+          onClick={() => setShowReorderMenu(false)}
+        >
+          <img src={Menu} alt="menu" className="w-full h-full object-cover" />
+        </div>
+      )}
+      {(showMenu || showReorderMenu) && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-gray-700 bg-opacity-50 z-10"
+          onClick={() => {
+            setShowMenu(false);
+            setShowReorderMenu(false);
+          }}
+        ></div>
+      )}
       <hr className="w-full hidden sm:block" />
     </div>
   );

@@ -7,15 +7,21 @@ import Cart1 from "./../assets/images/Cart 1.png";
 import Cart2 from "./../assets/images/Cart 2.png";
 import Cart3 from "./../assets/images/Cart 3.png";
 import Cart4 from "./../assets/images/Cart 4.png";
-import ProgressCart from './../assets/images/Progress cart.png';
+import ProgressCart from "./../assets/images/Progress cart.png";
 import { FaArrowRight } from "react-icons/fa";
 
 const Cart = () => {
   return (
     <div id="cart" className="flex flex-col items-center justify-center ">
       <div className="max-w-[430px] md:max-w-[900px] m-5 flex flex-col gap-4 items-center justify-center ">
-        <p className="text-2xl font-bold text-gray-700 block sm:hidden">Shopping Cart</p>
-        <img src={ProgressCart} alt="progress bar" className="hidden sm:block my-4" />
+        <p className="text-2xl font-bold text-gray-700 block sm:hidden">
+          Shopping Cart
+        </p>
+        <img
+          src={ProgressCart}
+          alt="progress bar"
+          className="hidden sm:block my-4"
+        />
         <div className="hidden sm:flex flex-col gap-4 ">
           <img src={CartItem1} alt="cart item" />
           <img src={CartItem2} alt="cart item" />
@@ -29,7 +35,7 @@ const Cart = () => {
           <img src={Cart4} alt="cart item" />
         </div>
         <div className="flex flex-col md:flex-row md:gap-[500px] items-center justify-center">
-          <hr className="w-11/12 block sm:hidden "/>
+          <hr className="w-11/12 block sm:hidden " />
           <div className="flex flex-row gap-20 my-4 -ml-20 font-bold">
             <p>Subtotal</p>
             <p>£651.49</p>

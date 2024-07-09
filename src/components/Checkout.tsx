@@ -57,14 +57,14 @@ const Checkout = () => {
               <MdOutlineCheckBoxOutlineBlank className="text-gray-400" />
               Standard shipping
             </p>
-            <p className="font-bold text-sm -ml-3">$3.99</p>
+            <p className="font-bold text-sm -ml-3">£3.99</p>
           </div>
           <div className="flex flex-row gap-20 -ml-20">
             <p className="flex flex-row gap-2 items-center justify-center text-sm">
               <IoIosCheckboxOutline className="text-violet-950" />
               Express shipping
             </p>
-            <p className="font-bold text-sm">$5.99</p>
+            <p className="font-bold text-sm">£5.99</p>
           </div>
         </div>
         <hr className="w-10/12 sm:w-2/3" />
@@ -73,20 +73,20 @@ const Checkout = () => {
             <p className="flex flex-row gap-2 items-center justify-center">
               Subtotal
             </p>
-            <p>$651.49</p>
+            <p>£651.49</p>
           </div>
           <div className="flex flex-row gap-32 -ml-20">
             <p className="flex flex-row gap-2 items-center justify-center">
               Shipping
             </p>
-            <p>$5.99</p>
+            <p>£5.99</p>
           </div>
         </div>
         <hr className="w-10/12 sm:w-2/3" />
         <div className="flex flex-col md:flex-row sm:gap-56 sm:-ml-16  items-center justify-center">
           <div className="flex flex-row gap-40 -ml-20 sm:ml-56 font-bold text-xl">
             <p>Total</p>
-            <p>$655.48</p>
+            <p>£655.48</p>
           </div>
           <hr className="w-full sm:w-2/3 my-4" />
           <div className="flex flex-row items-center gap-16 sm:gap-0 justify-center my-10 sm:my-0">
